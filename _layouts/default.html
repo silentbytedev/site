@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ "/static/style.css" | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+  <header>
+    <h1>Silent Byte</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/challenges">Challenges</a></li>
+        <li><a href="/writeups">Writeups</a></li>
+      </ul>
+    </nav>
+  </header>
+-->
+  <div class="content">
+    {{ content }}
+  </div>
+
+  <footer>
+    <p>© 2025 SilentByte. All rights reserved.</p>
+  </footer>
+</body>
+</html>
