@@ -6,4 +6,4 @@ title: "Welcome to Silent Byte"
 # Silent Byte
 In Silence, we code
 
-<img src="static/silent-byte-color.svg" class="logo" alt="Logo" id="logo">
+<div class="logo-container"><img src="static/silent-byte-color.svg" class="logo" alt="Logo" id="logo"></div>

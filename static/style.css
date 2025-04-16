@@ -10,10 +10,20 @@ html, body {
 }
 
 .content {
-    flex: 1; /* ← this makes it stretch to fill space */
-    overflow-y: auto; /* optional: scroll if content overflows */
-    background: #f0f0f0; /* just for visibility */
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    background: #f0f0f0;
     animation: fadeToBlack 1s ease forwards;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @keyframes fadeToBlack {
@@ -31,34 +41,53 @@ body {
     font-family: 'Orbitron', sans-serif;
   }
 
-  .hero {
+.hero {
     background-image: url('/static/bg2_low.jpg');
     background-size: cover;
     background-position: center;
     transition: background-image 0.5s ease-in;
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
+}
 
   .hero.loaded {
     background-image: url('/static/bg2.webp');
   }
 
-  .logo {
-    width:512px;
-    height:512px;
-    display: block;
-    margin: 0 auto;
+.logo {
+    min-width:512px;
+    height:auto;
+
     opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
+    visibility: hidden;
+    animation: fadeIn 1s ease-in-out forwards;
+}
 
-  .logo.loaded {
+.logo.loaded {
     opacity: 1;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      visibility: hidden;
+    }
+    100% {
+      opacity: 1;
+      visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+      min-width:512px;
+      width: 80%;
+      height: auto;
+    }
   }
 
-  footer {
+footer {
     font-size:0.6em;
-  }
+}
 
 

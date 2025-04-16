@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ page.title }}</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
   <link rel="stylesheet" href="/static/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
@@ -37,10 +38,21 @@
         hero.classList.add('loaded');
     };
 
-    const logo_img = document.getElementById('logo');
-    logo_img.onload = () => {
-    logo_img.classList.add('loaded');
-    };
+    // const logo_img = document.getElementById('logo');
+    // logo_img.onload = () => {
+    // logo_img.classList.add('loaded');
+    // };
+
+    // var logo = document.getElementById('logo');
+
+    // // Check if the image is already loaded, if not, wait for it to load
+    // if (logo.complete) {
+    //     logo.classList.add('loaded');
+    // } else {
+    //     logo.onload = function() {
+    //     logo.classList.add('loaded');
+    //     };
+    // }
   </script>
 </body>
 </html>
