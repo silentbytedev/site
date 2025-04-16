@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="/static/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="hero" id="hero">
+    <div class="container">
     <!--
   <header>
     <h1>Silent Byte</h1>
@@ -27,5 +28,19 @@
   <footer>
     <p>© 2025 SilentByte. All rights reserved.</p>
   </footer>
+</div>
+  <script>
+    const hero = document.getElementById('hero');
+    const img = new Image();
+    img.src = '/static/bg2.webp';
+    img.onload = () => {
+        hero.classList.add('loaded');
+    };
+
+    const logo_img = document.getElementById('logo');
+    logo_img.onload = () => {
+    logo_img.classList.add('loaded');
+    };
+  </script>
 </body>
 </html>

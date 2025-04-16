@@ -1,12 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1; /* ← this makes it stretch to fill space */
+    overflow-y: auto; /* optional: scroll if content overflows */
+    background: #f0f0f0; /* just for visibility */
+    animation: fadeToBlack 1s ease forwards;
+}
+
+@keyframes fadeToBlack {
+    from {
+      background-color: #666666;
+    }
+    to {
+      background-color: transparent;
+    }
+  }
+
 body {
-    background-image: url('bg2.jpg');
+    background-color: black;
+    color: #666666;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  .hero {
+    background-image: url('/static/bg2_low.jpg');
     background-size: cover;
     background-position: center;
+    transition: background-image 0.5s ease-in;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #666666;
+  }
 
-    font-family: 'Orbitron', sans-serif;
+  .hero.loaded {
+    background-image: url('/static/bg2.webp');
   }
 
   .logo {
@@ -14,8 +49,16 @@ body {
     height:512px;
     display: block;
     margin: 0 auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .logo.loaded {
+    opacity: 1;
   }
 
   footer {
     font-size:0.6em;
   }
+
+
